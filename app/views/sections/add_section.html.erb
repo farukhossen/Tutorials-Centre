@@ -1,0 +1,13 @@
+<div class="add-chapter add-data">
+  <h1>Add Section</h1>
+  <%= form_for(@section,url:sections_publish_section_path) do |f| %>
+      <%=select("post", "category_id", Category.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Select Category'},class:'form-control')%>
+      <%=select("post", "category_id", SubCategory.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Select Sub Category'},class:'form-control subcategory-select')%>
+      <%=select("post", "category_id", Chapter.all.collect {|p| [ p.name, p.id ] }, {include_blank: 'Select Chapter'},class:'form-control subcategory-select')%>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name,:class=> 'form-control',placeholder:'' %>
+      </div>
+      <%= f.submit :class => "btn btn-primary form-control" %>
+  <% end %>
+</div>

@@ -1,0 +1,105 @@
+// Place all the styles related to the homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.tuto-home-header{
+  background:url('hrdarkblue.jpg');
+  background-size:100% 120px;
+  height:120px;
+
+}
+
+.company-logo{
+  padding-top:20px;
+  padding-left:20px;
+}
+.company-logo img{
+  height:80px;
+  width:320px;
+  float:left;
+}
+.company-title{
+  color:white;
+  vertical-align: middle;
+  padding-top:50px;
+  padding-left:0;
+}
+.nav.navbar-nav{
+  padding-left:50px;
+}
+.tuto-home-content{
+  width:95%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-top:10px;
+}
+.tuto-home-leftbar{
+  background:white;
+  padding-top:10px;
+  padding-left:0;
+  padding-right:0;
+}
+
+.list-group >li{
+  list-style-type: none;
+  margin-bottom:5px;
+}
+
+.list-group >li ul{
+  display:none;
+  background:#eee;
+}
+.list-group >li >a.list-group-item.disabled{
+  cursor:pointer;
+}
+.list-group >li >a.list-group-item.disabled:hover{
+  cursor:pointer;
+}
+
+.list-group li[data-status='open'] ul{
+  display:block;
+}
+
+.list-group li[data-status='close'] ul{
+  display:none;
+}
+.subcategory span{
+  display:inline-block;
+  width:100%;
+  background-color:gray;
+  text-align: center;
+  border-radius: 5px;
+  height:50px;
+  color:white;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:12px;
+  margin-bottom:10px;
+  font-weight: bolder;
+
+
+}
+.subcategory span:hover{
+  background-color: #337AB7;
+  cursor:pointer;
+}
+
+.footer{
+  background:url('hrdarkblue.jpg');
+  background-size:100% 150px;
+  height:150px;
+  margin-bottom:20px;
+  .footer-nav{
+    width:40%;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right: auto;
+    ul{
+      li{
+        display:inline;
+        margin-left:20px;
+        border-left:1px solid gray;
+        padding-left:5px;
+      }
+    }
+  }
+}

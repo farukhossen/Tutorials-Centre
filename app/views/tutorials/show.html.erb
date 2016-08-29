@@ -1,0 +1,178 @@
+
+<div class="tuto-home-header row">
+  <div class="col-md-3 company-logo"><%=image_tag 'company.png'%></div><div class=""></div><div class="col-md-4"></div>
+  <div class="col-md-6"></div>
+</div> <!--end of tuto-home-header-->
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/homes/index">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <%@categories.each do |category|%>
+                <li><a href="#"><%=category.name%></a></li>
+            <%end%>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Favorites <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li ><a href="#">Contact Us <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">User <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div class="tuto-home-content">
+  <div class="row">
+    <div class="col-md-3 tuto-tutorials-leftbar">
+      <div class="subject">
+        JAVASCRIPT
+      </div>
+      <div class="list-group">
+        <a href="#" class="list-group-item active">
+          Introduction
+        </a>
+        <a href="#" class="list-group-item">Data Type</a>
+        <a href="#" class="list-group-item">Variable</a>
+        <a href="#" class="list-group-item">Function</a>
+        <a href="#" class="list-group-item">Event Handler</a>
+      </div>
+    </div>
+    <div class="col-md-7 col-md-offset-0 tuto-tutorials-content">
+        <div class="chapter-info row">
+          <div class="col-md-6">
+            <div class="chapter-heading">Introduction</div>
+          </div>
+          <div class="video-link col-md-6">
+            <button class="watch-video"><i class="glyphicon glyphicon-camera"></i> Watch Video</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="chapter-switch col-md-12">
+            <div class="previous-chapter">
+              <a href="#">Previous Chapter</a>
+            </div><!--end of previous-chapter-->
+            <div class="next-chapter">
+              <a href="#">Next Chapter</a>
+            </div> <!--next-chapter-->
+          </div><!--end of chapter-switch-->
+
+        </div>
+        <div class="chapter-video">
+            <iframe  src="https://www.youtube.com/embed/r63f51ce84A" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <!--<div class="section">-->
+          <!--<div class="section-heading">-->
+            <!--<div class="heading-content">BootStrap Starting</div>-->
+            <!--<div class="heading-underline"></div>-->
+          <!--</div>-->
+          <!--<div class="section-paragraph">-->
+            <!--<p>Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.</p>-->
+          <!--</div>-->
+          <!--<div class="section-list">-->
+            <!--<ul class="section-list-group">-->
+              <!--<li>Bootstrap is the most popular HTML, CSS, and JavaScript</li>-->
+              <!--<li>Bootstrap is the most popular HTML, CSS, and JavaScript</li>-->
+              <!--<li>Bootstrap is the most popular HTML, CSS, and JavaScript</li>-->
+              <!--<li>Bootstrap is the most popular HTML, CSS, and JavaScript</li>-->
+              <!--<li>Bootstrap is the most popular HTML, CSS, and JavaScript</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+          <!--<div class="section-code">-->
+            <!--<pre class="brush: cpp">-->
+                <!--<div class="container-fluid">-->
+                  <!--<h1>Hello World!</h1>-->
+                  <!--<div class="row">-->
+                    <!--<div class="col-sm-3" style="background-color:lavender;">-->
+                      <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+                        <!--incididunt ut labore et dolore magna aliqua.</p>-->
+                      <!--<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+                        <!--aliquip ex ea commodo consequat.</p>-->
+                    <!--</div>-->
+                    <!--<div class="col-sm-9" style="background-color:lavenderblush;">-->
+                      <!--<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium-->
+                        <!--doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore-->
+                        <!--veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>-->
+                    <!--</div>-->
+                  <!--</div>-->
+                <!--</div>-->
+            <!--</pre>-->
+          <!--</div>-->
+          <!--<div class="section-image">-->
+            <!--<%=image_tag 'image.png'%>-->
+          <!--</div>-->
+
+
+        <!--</div>-->
+        <div class="chapter-switch">
+            <div class="previous-chapter">
+              <a href="#">Previous Chapter</a>
+            </div><!--end of previous-chapter-->
+            <div class="next-chapter">
+              <a href="#">Next Chapter</a>
+            </div> <!--next-chapter-->
+        </div><!--end of chapter-switch-->
+    </div> <!--end of content-->
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#">FAQ's</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</div>
+

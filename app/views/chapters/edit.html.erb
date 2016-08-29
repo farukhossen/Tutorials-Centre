@@ -1,0 +1,19 @@
+<div class="add-chapter add-data">
+  <h1><%= @subcategory.name%></h1>
+  <h1>Update Chapter</h1>
+  <%= form_for [@subcategory, @chapter] do |f| %>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name,:class=> 'form-control',placeholder:'' %>
+      </div>
+      <div class=" field video">
+        <%= f.fields_for :videos do |ff|%>
+            <%= render 'video_fields', f:ff%>
+        <%end%>
+        <br/>
+        <%=link_to_add_fields "add more video", f, :videos%>
+
+      </div>
+      <%= f.submit :class => "btn btn-primary form-control" %>
+  <% end %>
+</div>

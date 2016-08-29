@@ -1,0 +1,12 @@
+<div class="add-subcategory add-data">
+  <h1>Edit Subcategory</h1>
+  <%= form_for(@subcategory) do |f| %>
+      <div class="field">
+        <%= f.label :name %><br>
+        <%= f.text_field :name,:class=> 'form-control',placeholder:'' %>
+      </div>
+
+      <%= f.submit :class => "btn btn-primary form-control" %>
+
+  <% end %>
+</div>

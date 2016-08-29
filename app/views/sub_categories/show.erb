@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <%=@subcategory.name%>
+      <%= link_to 'edit', edit_sub_category_path(@subcategory), class: 'btn btn-default btn-xs' %>
+      <%=link_to 'add chapter', new_sub_category_chapter_path(@subcategory), class: 'btn btn-default btn-xs'%>
+
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+          <%@subcategory.chapters.each do |chapter|%>
+            <li class="list-group-item">
+              <%= chapter.name%>
+              <%= link_to 'edit', edit_sub_category_chapter_path(@subcategory,chapter), class: 'btn btn-default btn-xs' %>
+              <%= link_to 'delete', sub_category_chapter_path(@subcategory, chapter), method: :delete, class: 'btn btn-default btn-xs' %>
+            </li>
+        <%end%>
+        </ul>
+    </div>
+</div>

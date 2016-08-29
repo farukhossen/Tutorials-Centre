@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  section_id: 1
+  type: 
+  text: MyText
+  priority: MyString
+
+two:
+  section_id: 1
+  type: 
+  text: MyText
+  priority: MyString

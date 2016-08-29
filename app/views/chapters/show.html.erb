@@ -1,0 +1,66 @@
+
+
+
+<div class="tuto-home-content">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="subject">
+        <%= @subcategory.name%>
+      </div>
+      <ul class="list-group">
+        <%@chapters.each do |chapter| %>
+            <li class="list-group-item<%if chapter.id == @chapter.id then%> active active-chapter<%end%>">
+              <%= link_to chapter.name, sub_category_chapter_path(@subcategory, chapter)%>
+            </li>
+        <%end%>
+      </ul>
+    </div>
+    <div class="col-md-7 col-md-offset-0 tuto-tutorials-content">
+      <div class="chapter-info row">
+          <div class="chapter-heading"><%= @chapter.name%></div>
+      </div>
+
+      <div class="row">
+        <div class="chapter-switch col-md-12">
+          <div class="previous-chapter">
+            <a href="#" class="btn btn-default btn-xs">Previous Chapter</a>
+          </div><!--end of previous-chapter-->
+          <div class="next-chapter">
+            <a href="#" class="btn btn-default btn-xs">Next Chapter</a>
+          </div> <!--next-chapter-->
+        </div><!--end of chapter-switch-->
+
+      </div>
+      <div class="videos-wrapper">
+        <%@chapter.videos.each do|video|%>
+            <div class="chapter-video">
+              <h3><%=video.name%></h3>
+              <%= video.video_link.html_safe%>
+            </div>
+        <%end%>
+      </div>
+
+      <!--</div>-->
+      <div class="chapter-switch">
+        <div class="previous-chapter">
+          <a href="#" class="btn btn-default btn-xs">Previous Chapter</a>
+        </div><!--end of previous-chapter-->
+        <div class="next-chapter">
+          <a href="#" class="btn btn-default btn-xs">Next Chapter</a>
+        </div> <!--next-chapter-->
+      </div><!--end of chapter-switch-->
+    </div> <!--end of content-->
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#">FAQ's</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Terms</a></li>
+    </ul>
+  </div>
+</div>
+

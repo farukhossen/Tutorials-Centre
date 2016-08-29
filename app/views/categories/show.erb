@@ -1,0 +1,13 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <%=@category.name%>
+      <%= link_to 'edit', edit_category_path(@category), class: 'btn btn-default btn-xs'%>
+    </div>
+    <div class="panel-body">
+        <ul class="list-group">
+          <%@category.sub_categories.each do |subcategory|%>
+            <li class="list-group-item"><%= link_to subcategory.name, sub_category_path(subcategory) %></li>
+          <%end%>
+        </ul>
+    </div>
+</div>
